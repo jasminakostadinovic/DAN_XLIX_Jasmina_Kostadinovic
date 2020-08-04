@@ -68,7 +68,7 @@ namespace Hotel_Management_App.ViewModel
 
 			DataAccess dataAccess = new DataAccess();
 
-			if (!dataAccess.IsCorrectUser(userName, password))
+			if (!dataAccess.IsCorrectUser(userName, SecurePasswordHasher.Hash(password)))
 			{
 				WarningView warning = new WarningView(loginView);
 				warning.Show("User name or password are not correct!");

@@ -10,7 +10,7 @@ namespace Hotel_Management_App.Model
 {
     class LoginData
     {
-        private static readonly string ownerAccessPath = "OwnerAccess";
+        private static readonly string ownerAccessPath = @"..\OwnerAccess";
 
         static LoginData()
         {
@@ -23,7 +23,7 @@ namespace Hotel_Management_App.Model
                 });
             }
             HotelOwnerUserName = File.ReadAllLines(ownerAccessPath)[0];
-            HotelOwnerPasswordHashed = SecurePasswordHasher.Hash(File.ReadAllLines(ownerAccessPath)[0]);
+            HotelOwnerPasswordHashed = SecurePasswordHasher.Hash(File.ReadAllLines(ownerAccessPath)[1]);
         }
 
         public static string HotelOwnerUserName { get; private set; }

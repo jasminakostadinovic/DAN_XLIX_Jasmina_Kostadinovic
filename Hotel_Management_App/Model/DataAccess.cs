@@ -13,7 +13,7 @@ namespace Hotel_Management_App.Model
 		{
 			using (var conn = new HotelManagementEntities())
 			{
-				var user = conn.tblUserDatas.FirstOrDefault(x => x.Username == userName && x.Password == SecurePasswordHasher.Hash(password));
+				var user = conn.tblUserDatas.FirstOrDefault(x => x.Username == userName && x.Password == password);
 				if (user != null)
 					return true;
 				return false;
