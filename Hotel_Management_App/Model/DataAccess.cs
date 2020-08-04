@@ -107,5 +107,14 @@ namespace Hotel_Management_App.Model
 				conn.SaveChanges();
 			}
 		}
+
+		internal void AddNewManager(tblManager manager)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				conn.tblManagers.Add(manager);
+				conn.SaveChanges();
+			}
+		}
 	}
 }
