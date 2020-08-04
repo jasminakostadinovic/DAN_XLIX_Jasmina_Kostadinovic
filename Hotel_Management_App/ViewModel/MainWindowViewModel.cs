@@ -82,7 +82,7 @@ namespace Hotel_Management_App.ViewModel
 					var manager = dataAccess.LoadManagerByUsername(UserName);
 					ManagerView managerView = new ManagerView(manager);
 					loginView.Close();
-					ManagerView.Show();
+					managerView.Show();
 					return;
 				}
 				if (typeOfUser == "employee")

@@ -93,7 +93,10 @@
     <Compile Include="Model\vwEmployee.cs">
       <DependentUpon>HotelManagementModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Employee\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\HotelOwner\HotelOwnerViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\Manager\ManagerViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="View\Employee\EmployeeView.xaml.cs">

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_Management_App.Model;
+using Hotel_Management_App.ViewModel.Manager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,10 @@ namespace Hotel_Management_App.View.Manager
     /// </summary>
     public partial class ManagerView : Window
     {
-        public ManagerView()
+        public ManagerView(tblManager manager)
         {
             InitializeComponent();
+            this.DataContext = new ManagerViewModel(this, manager);
         }
     }
 }

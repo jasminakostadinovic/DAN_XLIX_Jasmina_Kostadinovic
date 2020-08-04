@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hotel_Management_App.Model;
+using Hotel_Management_App.ViewModel.Employee;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Hotel_Management_App.View.Employee
 {
@@ -19,9 +9,10 @@ namespace Hotel_Management_App.View.Employee
     /// </summary>
     public partial class EmployeeView : Window
     {
-        public EmployeeView()
+        public EmployeeView(tblEmployee employee)
         {
             InitializeComponent();
+            this.DataContext = new EmployeeViewModel(this, employee);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Hotel_Management_App.ViewModel;
+using System.Windows;
 
 namespace Hotel_Management_App.View
 {
