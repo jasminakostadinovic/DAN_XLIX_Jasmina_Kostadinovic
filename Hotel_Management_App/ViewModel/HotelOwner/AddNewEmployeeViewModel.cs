@@ -287,7 +287,17 @@ namespace Hotel_Management_App.ViewModel.HotelOwner
                         validationMessage = "Invalid date of birth!";
                         CanSave = false;
                     }
-                }        
+                }
+                else if (name == "FloorNumber")
+                {
+                    if (!db.IsManagerOnTheFloor(FloorNumber))
+                    {
+                        validationMessage = "There is no manager on this floor!";
+                        CanSave = false;
+                    }
+
+                }
+              
 
                 if (string.IsNullOrEmpty(validationMessage))
                     CanSave = true;

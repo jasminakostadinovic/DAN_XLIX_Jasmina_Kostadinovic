@@ -116,5 +116,13 @@ namespace Hotel_Management_App.Model
 				conn.SaveChanges();
 			}
 		}
+
+		internal bool IsManagerOnTheFloor(string floorNumber)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				return conn.tblManagers.Any(x => x.FloorNumber == floorNumber);
+			}
+		}
 	}
 }

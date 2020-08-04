@@ -60,8 +60,8 @@ Path=(Validation.Errors)[0].ErrorContent}"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="1" Name="lblGivenName" Content="Employee Given Name:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
-        <Label Grid.Column="1" Grid.Row="3" Name="lblSurname" Content="Employee Surname:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
+        <Label Grid.Column="1" Grid.Row="1" Name="lblGivenName" Content="Manager Given Name:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
+        <Label Grid.Column="1" Grid.Row="3" Name="lblSurname" Content="Manager Surname:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
         <Label Grid.Column="1" Grid.Row="5" Name="lblDateOfBirth" Content="Date of Birth:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
         <Label Grid.Column="1" Grid.Row="7" Name="lblEmail" Content="Email:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
         <Label Grid.Column="1" Grid.Row="9" Name="lblUsername" Content="Username:" Padding="0" HorizontalAlignment="Right" Foreground="White"/>
