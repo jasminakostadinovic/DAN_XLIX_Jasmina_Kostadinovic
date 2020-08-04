@@ -69,7 +69,7 @@ namespace Hotel_Management_App.ViewModel.HotelOwner
             {
                 if (addNewManager == null)
                 {
-                    addNewEmployee = new RelayCommand(param => AddNewManagerExecute(), param => CanAddNewManager());
+                    addNewManager = new RelayCommand(param => AddNewManagerExecute(), param => CanAddNewManager());
                 }
                 return addNewManager;
             }
@@ -82,10 +82,10 @@ namespace Hotel_Management_App.ViewModel.HotelOwner
                 AddNewManagerView addNewManagerView = new AddNewManagerView();
                 addNewManagerView.ShowDialog();
 
-                if ((addNewManagerView.DataContext as AddNewManagerViewModel).IsAddedNewManager == true)
-                {
-                    MessageBox.Show("New manager has been successfully created.");
-                }
+                //if ((addNewManagerView.DataContext as AddNewManagerViewModel).IsAddedNewManager == true)
+                //{
+                //    MessageBox.Show("New manager has been successfully created.");
+                //}
             }
             catch (Exception ex)
             {

@@ -69,5 +69,43 @@ namespace Hotel_Management_App.Model
 				return null;
 			}
 		}
+
+
+		internal bool IsUniqueUsername(string username)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				return !conn.tblUserDatas.Any(x => x.Username == username);
+			}
+		}
+
+		internal void AddNewUserData(tblUserData userData)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				conn.tblUserDatas.Add(userData);
+				conn.SaveChanges();
+			}
+		}
+
+		internal int GetUserDataId(string username)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				var user = conn.tblUserDatas.FirstOrDefault(x => x.Username == username);
+				if (user != null)
+					return user.UserDataID;
+				return -1;
+			}
+		}
+
+		internal void AddNewEmployee(tblEmployee employee)
+		{
+			using (var conn = new HotelManagementEntities())
+			{
+				conn.tblEmployees.Add(employee);
+				conn.SaveChanges();
+			}
+		}
 	}
 }

@@ -4,7 +4,6 @@ using Hotel_Management_App.View;
 using Hotel_Management_App.View.Employee;
 using Hotel_Management_App.View.HotelOwner;
 using Hotel_Management_App.View.Manager;
-using System;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Validations;
@@ -57,7 +56,6 @@ namespace Hotel_Management_App.ViewModel
 		void Submit(object obj)
 		{
 			string password = (obj as PasswordBox).Password;
-			var validate = new Validations.Validations();
 			if (UserName == LoginData.HotelOwnerUserName && SecurePasswordHasher.Verify(password, LoginData.HotelOwnerPasswordHashed))
 			{
 				HotelOwnerView hotelOwnerView = new HotelOwnerView();
@@ -68,7 +66,7 @@ namespace Hotel_Management_App.ViewModel
 
 			DataAccess dataAccess = new DataAccess();
 
-			if (!dataAccess.IsCorrectUser(userName, SecurePasswordHasher.Hash(password)))
+			if (!dataAccess.IsCorrectUser(userName, password))
 			{
 				WarningView warning = new WarningView(loginView);
 				warning.Show("User name or password are not correct!");

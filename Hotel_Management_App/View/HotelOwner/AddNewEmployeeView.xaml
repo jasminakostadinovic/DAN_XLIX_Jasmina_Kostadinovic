@@ -109,7 +109,7 @@ Path=(Validation.Errors)[0].ErrorContent}"/>
                  TextWrapping="Wrap"
                  Text="{Binding Citizenship, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
 
-        <ComboBox Grid.Column="3" Grid.Row="13" Name="cmbSex" Height="20" Width="auto" 
+        <ComboBox Grid.Column="3" Grid.Row="19" Name="cmbSex" Height="20" Width="auto" 
                  IsEditable="True" ItemsSource="{Binding SexTypes, UpdateSourceTrigger=PropertyChanged}"
                   SelectedItem="{Binding Sex, UpdateSourceTrigger=PropertyChanged}"/>
 
