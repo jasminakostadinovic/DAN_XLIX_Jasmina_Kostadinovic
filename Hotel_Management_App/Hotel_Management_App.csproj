@@ -94,6 +94,8 @@
       <DependentUpon>HotelManagementModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Employee\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\HotelOwner\AddNewEmployeeViewModel.cs" />
+    <Compile Include="ViewModel\HotelOwner\AddNewManagerViewModel.cs" />
     <Compile Include="ViewModel\HotelOwner\HotelOwnerViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\Manager\ManagerViewModel.cs" />
@@ -101,6 +103,12 @@
     <Compile Include="ViewModel\WarningViewModel.cs" />
     <Compile Include="View\Employee\EmployeeView.xaml.cs">
       <DependentUpon>EmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HotelOwner\AddNewEmployeeView.xaml.cs">
+      <DependentUpon>AddNewEmployeeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HotelOwner\AddNewManagerView.xaml.cs">
+      <DependentUpon>AddNewManagerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HotelOwner\HotelOwnerView.xaml.cs">
       <DependentUpon>HotelOwnerView.xaml</DependentUpon>
@@ -125,6 +133,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Employee\EmployeeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HotelOwner\AddNewEmployeeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HotelOwner\AddNewManagerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
