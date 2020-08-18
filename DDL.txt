@@ -30,7 +30,7 @@ CREATE TABLE tblUserData
 	DateOfBirth datetime not null, 
 	Email nvarchar(50)not null,
 	Username nvarchar(50)not null unique,
-	[Password] nvarchar(50)not null);
+	[Password] char(1000)not null);
 
 CREATE TABLE tblEmployees
 	(EmployeeID int primary key identity(1,1),
